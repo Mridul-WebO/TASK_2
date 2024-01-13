@@ -26,3 +26,4 @@ const result3 = getFullDetails.bind(ObjectData1, ["surat"]);
 console.log(result1);
 console.log(result2);
 console.log(result3());
+const data = ["hello", "efd", "sk"];
