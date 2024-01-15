@@ -72,19 +72,25 @@
     </div>
    -->
 
-    <!-- <script src="Classes.js"></script> -->
+    <!-- <script src="Discussion_questions.js"></script> -->
     <script>
-      // var a;
-      // let b;
-      // //  const c;
-      // console.log(a, b);
-      // console.log("arr", { ...arr });
+      const arr = [1, 2, 3, 4, [5, [6, 7]], 8];
 
-      let arr = 20;
-      console.log("arr", arr);
-      arr = "xyz";
-      console.log("arr2", arr);
-      arr = "123";
+      const newArr = [];
+      function flattenArr(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          const elementLength = arr[i].length;
+          if (elementLength > 0) {
+            flattenArr(arr[i]);
+          } else {
+            newArr.push(arr[i]);
+          }
+        }
+        return newArr;
+      }
+
+      const result = flattenArr(arr);
+      console.log(result);
     </script>
   </body>
 </html>
